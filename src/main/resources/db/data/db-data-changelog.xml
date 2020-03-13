@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="alexei erofeev" id="president_populate_1">
+        <insert tableName="president">
+            <column name="id" value="1"/>
+            <column name="first_name" value="Alexandr"/>
+            <column name="last_name" value="Lukashenko"/>
+            <column name="age" value="60"/>
+        </insert>
+        <insert tableName="president">
+            <column name="id" value="2"/>
+            <column name="first_name" value="Vladimir"/>
+            <column name="last_name" value="Putin"/>
+            <column name="age" value="55"/>
+        </insert>
+        <insert tableName="president">
+            <column name="id" value="3"/>
+            <column name="first_name" value="Donald"/>
+            <column name="last_name" value="Tramp"/>
+            <column name="age" value="66"/>
+        </insert>
+        <insert tableName="president">
+            <column name="id" value="4"/>
+            <column name="first_name" value="Chi"/>
+            <column name="last_name" value="Long"/>
+            <column name="age" value="50"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="alexei erofeev" id="country_populate_1">
+        <insert tableName="country">
+            <column name="name" value="Belarus"/>
+            <column name="population" value="11000000"/>
+            <column name="president_id" value="1"/>
+        </insert>
+        <insert tableName="country">
+            <column name="name" value="Russia"/>
+            <column name="population" value="110000000"/>
+            <column name="president_id" value="2"/>
+        </insert>
+        <insert tableName="country">
+            <column name="name" value="USA"/>
+            <column name="population" value="15000000"/>
+            <column name="president_id" value="3"/>
+        </insert>
+        <insert tableName="country">
+            <column name="name" value="China"/>
+            <column name="population" value="2000000000"/>
+            <column name="president_id" value="4"/>
+        </insert>
+
+    </changeSet>
+
+    <changeSet author="alexei erofeev" id="city_populate_1">
+        <insert tableName="city">
+            <column name="name" value="Minsk"/>
+            <column name="post_code" value="0172"/>
+            <column name="country_id" value="100"/>
+        </insert>
+
+        <insert tableName="city">
+            <column name="name" value="Hrodno"/>
+            <column name="post_code" value="0152"/>
+            <column name="country_id" value="100"/>
+        </insert>
+
+        <insert tableName="city">
+            <column name="name" value="New York"/>
+            <column name="post_code" value="0001"/>
+            <column name="country_id" value="102"/>
+        </insert>
+
+        <insert tableName="city">
+            <column name="name" value="Washington"/>
+            <column name="post_code" value="0002"/>
+            <column name="country_id" value="102"/>
+        </insert>
+
+
+    </changeSet>
+
+
+
+
+
+</databaseChangeLog>
