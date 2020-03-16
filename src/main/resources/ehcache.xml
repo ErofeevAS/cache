@@ -9,7 +9,7 @@
 
     <cache alias="countriesCache">
         <key-type>java.lang.String</key-type>
-        <value-type>com.erofeev.demo.repo.model.Country</value-type>
+        <value-type>com.erofeev.demo.service.model.CountryDTO</value-type>
         <expiry>
             <ttl unit="seconds">100</ttl>
         </expiry>

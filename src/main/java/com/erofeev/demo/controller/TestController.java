@@ -2,6 +2,7 @@ package com.erofeev.demo.controller;
 
 import com.erofeev.demo.repo.model.Country;
 import com.erofeev.demo.service.CountryServiceImpl;
+import com.erofeev.demo.service.model.CountryDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +40,7 @@ public class TestController {
     }
 
     @GetMapping("/{name}")
-    public Country getCountry(@PathVariable String name) {
+    public CountryDTO getCountry(@PathVariable String name) {
         return countryService.getCountry(name);
     }
 

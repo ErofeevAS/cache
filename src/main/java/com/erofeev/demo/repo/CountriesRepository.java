@@ -11,7 +11,6 @@ import java.util.List;
 public interface CountriesRepository extends JpaRepository<Country, Long> {
     List<Country> getAllBy();
 
-    @Cacheable(cacheNames = "countriesCache", key = "#name")
     Country getFirstByName(String name);
 
 //    Country update(String name, Long population);
